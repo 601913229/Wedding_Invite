@@ -29,13 +29,12 @@
   </video>
 
   <audio id="bgMusic" autoplay loop>
-    <source src="bg-music.mp3" type="audio/mp3">
+    <source src="BG music.mp3" type="audio/mp3">
   </audio>
 
   <script>
     const video = document.getElementById('weddingVideo');
     const audio = document.getElementById('bgMusic');
-
     // Keep music in sync when video is paused or played
     video.onplay = () => audio.play();
     video.onpause = () => audio.pause();
@@ -43,6 +42,7 @@
 </body>
 </head>
 </html>
+
 
 
 
