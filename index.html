@@ -24,12 +24,26 @@
   </style>
 </head>
 <body>
-  <video controls autoplay loop>
-    <source src="wedding-invite.mp4 & BG music.mp3" type="video/mp4 & audio/mp3" />
-    Your browser does not support the video tag.
+  <video id="weddingVideo" controls autoplay loop>
+    <source src="wedding-invite.mp4" type="video/mp4">
   </video>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="bg-music.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    const video = document.getElementById('weddingVideo');
+    const audio = document.getElementById('bgMusic');
+
+    // Keep music in sync when video is paused or played
+    video.onplay = () => audio.play();
+    video.onpause = () => audio.pause();
+  </script>
 </body>
+</head>
 </html>
+
 
 
 
